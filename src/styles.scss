@@ -1,1 +1,35 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap/scss/bootstrap";
+@import url(https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@100..900,300&display=swap);
+
+:root {
+    // Primary color
+    --primary-orange: hsl(26, 100%, 55%);
+    --primary-pale-orange: hsl(25, 100%, 94%);
+
+    // Neutral color
+    --neutral-dark-blue: hsl(220, 13%, 13%);
+    --neutral-dark-gray-blue: hsl(219, 9%, 45%);
+    --neutral-gray-blue: hsl(220, 14%, 75%);
+    --neutral-light-gray-blue: hsl(223, 64%, 98%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --neutral-dark-background: hsl(0, 0%, 0%, 0.75);
+
+    // Font
+    --font-family: 'Kumbh Sans';
+    --body-font-size: 16px;
+    --font-weight-light: 400;
+    --font-weight-bold: 700;
+}
+
+body{
+    font-family: var(--font-family), sans-serif !important;
+}
+
+p {
+    margin: 0 !important;
+}
+
+.navbar-color {
+    background-color: var(--neutral-light-gray-blue);
+}
