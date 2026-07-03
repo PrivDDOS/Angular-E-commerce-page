@@ -30,6 +30,24 @@ p {
     margin: 0 !important;
 }
 
+
 .navbar-color {
     background-color: var(--neutral-light-gray-blue);
+}
+
+.cart-icon {
+    height: 22px;
+}
+
+.product-container {
+    padding: 0 100px;
+}
+
+.product-img {
+    background-image: url(/images/image-product-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; /* Sets position to center */
+    height: 400px;
+    width: 400px;
 }
