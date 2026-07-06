@@ -30,6 +30,18 @@ p {
     margin: 0 !important;
 }
 
+.btn-color-orange {
+    color: var(--primary-orange);
+}
+
+.btn-color-black {
+    color: var(--neutral-dark-blue);
+}
+
+.btn-background-color {
+    background-color: var(--primary-orange);
+}
+
 .navbar-color {
     background-color: var(--neutral-light-gray-blue);
 }
@@ -51,11 +63,6 @@ p {
     width: 400px;
 }
 
-.gallery-width {
-    width: 30%;
-    margin-left: 15px;
-}
-
 .gallery-img {
     margin: 5px;
     width: 60px;
@@ -72,4 +79,22 @@ p {
 .thumbnail {
     width: 100%;
     height: 100%;
+}
+
+.product-info {
+    width: 60%;
+    margin: 50px 60px;
+}
+
+.product-name {
+    width: 60%;
+}
+
+.title-width-height {
+    width: 60%;
+    height: 20%;
+}
+
+.button-width {
+    width: 40%;
 }
