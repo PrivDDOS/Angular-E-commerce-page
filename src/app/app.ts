@@ -9,4 +9,14 @@ import { RouterOutlet } from '@angular/router';
 })
 export class App {
   protected readonly title = signal('Product-page');
+
+  quantity: number = 0
+
+  quantityPlus(num: number) {
+    this.quantity += 1
+  }
+
+  quantityMinus(num: number) {
+    this.quantity -= 1
+  }
 }
