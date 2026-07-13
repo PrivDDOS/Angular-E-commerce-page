@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { AfterViewInit, Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import Lightbox from 'bs5-lightbox';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +8,22 @@ import { RouterOutlet } from '@angular/router';
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })
-export class App {
+export class App implements AfterViewInit {
   protected readonly title = signal('Product-page');
 
-  quantity: number = 0
+  quantity = 0;
 
-  quantityPlus(num: number) {
-    this.quantity += 1
+  ngAfterViewInit(): void {
+    document.querySelectorAll<HTMLElement>('[data-toggle="lightbox"]').forEach((trigger) => {
+      trigger.addEventListener('click', Lightbox.initialize);
+    });
   }
 
-  quantityMinus(num: number) {
-    this.quantity -= 1
+  quantityPlus(): void {
+    this.quantity += 1;
+  }
+
+  quantityMinus(): void {
+    this.quantity -= 1;
   }
 }

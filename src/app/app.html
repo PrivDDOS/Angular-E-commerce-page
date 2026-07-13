@@ -65,36 +65,29 @@
 
       <div class="w-80 d-flex justify-content-around mt-3">
         <div class="gallery-img rounded">
-          <a target="_blank" href="./images/image-product-1-thumbnail.jpg">
+          <a href="./images/image-product-1.jpg" data-toggle="lightbox" data-gallery="sneaker">
             <img src="./images/image-product-1-thumbnail.jpg" alt="product 1" class="thumbnail" />
           </a>
         </div>
 
         <div class="gallery-img rounded">
-          <a target="_blank" href="./images/image-product-2-thumbnail.jpg">
+          <a href="./images/image-product-2.jpg" data-toggle="lightbox" data-gallery="sneaker">
             <img src="./images/image-product-2-thumbnail.jpg" alt="product 2" class="thumbnail" />
           </a>
         </div>
 
         <div class="gallery-img rounded">
-          <a target="_blank" href="./images/image-product-3-thumbnail.jpg">
+          <a href="./images/image-product-3.jpg" data-toggle="lightbox" data-gallery="sneaker">
             <img src="./images/image-product-3-thumbnail.jpg" alt="product 3" class="thumbnail" />
           </a>
         </div>
 
         <div class="gallery-img rounded">
-          <a target="_blank" href="./images/image-product-4-thumbnail.jpg">
+          <a href="./images/image-product-4.jpg" data-toggle="lightbox" data-gallery="sneaker">
             <img src="./images/image-product-4-thumbnail.jpg" alt="product 4" class="thumbnail" />
           </a>
         </div>
       </div>
-
-      <!-- Lightbox -->
-       <div id="lightBox" class="d-none position-fixed w-100 h-100 z-index-1 overflow-auto left-0 top-0 lightbox-background">
-        <div class="">
-          <img src="./images/icon-close.svg" alt="close icon">
-        </div>
-       </div>
 
     </div>
 
@@ -116,13 +109,13 @@
             <img
               src="./images/icon-minus.svg"
               class="btn bg-white border-0 shadow-none py-1"
-              (click)="quantityMinus(quantity)"
+              (click)="quantityMinus()"
             />
             <p class="fw-bold">{{ quantity }}</p>
             <img
               src="./images/icon-plus.svg"
               class="btn bg-white border-0 shadow-none py-1"
-              (click)="quantityPlus(quantity)"
+              (click)="quantityPlus()"
             />
           </div>
           <div
