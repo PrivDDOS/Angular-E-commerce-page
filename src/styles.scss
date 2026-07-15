@@ -13,7 +13,7 @@
     --neutral-gray-blue: hsl(220, 14%, 75%);
     --neutral-light-gray-blue: hsl(223, 64%, 98%);
     --neutral-white: hsl(0, 0%, 100%);
-    --neutral-dark-background: hsl(0, 0%, 0%, 0.75);
+    --neutral-dark-background: hsl(0, 0%, 0%, 0.50);
 
     // Font
     --font-family: 'Kumbh Sans';
@@ -164,6 +164,44 @@ img.btn:hover {
 .add:hover {
     color: var(--neutral-dark-blue);
     background-color: color-mix(in srgb, var(--primary-orange), var(--primary-pale-orange));
+}
+
+.modal.lightbox {
+    background-color: var(--neutral-dark-background);
+}
+
+.modal.lightbox .ratio,
+.modal.lightbox .ratio::before,
+.modal.lightbox .ratio::after {
+    background-color: transparent !important;
+}
+
+.modal.lightbox .carousel-item {
+    background-color: transparent !important;
+}
+
+.carousel-control.carousel-control-prev {
+    left: 10rem;
+}
+
+span.carousel-control-prev-icon {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/16777/16777661.png);
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: var(--neutral-light-gray-blue);
+    border-radius: 50%;
+}
+
+.carousel-control.carousel-control-next {
+    right: 10rem;
+}
+
+span.carousel-control-next-icon {
+    background-image: url(https://cdn-icons-png.flaticon.com/512/7893/7893857.png);
+    width: 2.2rem;
+    height: 2.2rem;
+    background-color: var(--neutral-light-gray-blue);
+    border-radius: 50%;
 }
 
 .button-width {
