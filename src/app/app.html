@@ -16,13 +16,14 @@
     <div class="d-flex align-items-center">
       <div class="dropdown">
         <a
-          class="text-reset me-5 dropdown-toggle"
+          class="text-reset position-relative me-5 dropdown-toggle"
           href="#"
           id="navbarDropdownMenuLink"
           role="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
-        >
+        > 
+          <div class="cart-quantity position-absolute quantity-color">{{ cartQuantity }}</div>
           <img src="./images/icon-cart.svg" alt="cart" />
         </a>
 
@@ -34,7 +35,7 @@
           <li class="mb-3">
             <p class="fw-bold mb-4">Cart</p>
             <div class="d-flex align-items-center flex-column">
-              <div class="d-flex flex-row">
+              <!--<div class="d-flex flex-row">
                 <img src="./images/image-product-1-thumbnail.jpg" alt="product" class="cart-img"/>
                 <div class="d-flex align-items-start flex-column">
                   <p>Fall Limited Edition Sneakers</p>
@@ -42,7 +43,7 @@
                     <p>$125.00 x 3 <strong>$375.00</strong></p>
                   </div>
                 </div>
-              </div>
+              </div>-->
               <div class="add w-100 d-flex align-items-center justify-content-center btn btn-background-color btn-color-black  mt-3">
                 Checkout
               </div>

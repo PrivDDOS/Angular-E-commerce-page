@@ -12,6 +12,7 @@ export class App implements AfterViewInit {
   protected readonly title = signal('Product-page');
 
   quantity = 0;
+  cartQuantity = 0;
 
   ngAfterViewInit(): void {
     document.querySelectorAll<HTMLElement>('[data-toggle="lightbox"]').forEach((trigger) => {

@@ -46,6 +46,10 @@ p {
     background-color: var(--neutral-dark-background);
 }
 
+.quantity-color {
+    background-color: var(--primary-orange);
+}
+
 .link {
     position: relative;
     display: inline-block;
@@ -92,6 +96,16 @@ p {
     transform: translateX(-50%) !important;
     margin-top: 16px;
     top: auto !important;
+}
+
+.cart-quantity {
+    top: -12px;
+    right: -12px;
+    color: white;
+    border-radius: 40%;
+    padding: 0 8px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .cart-img {
