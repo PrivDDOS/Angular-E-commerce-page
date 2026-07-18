@@ -114,6 +114,16 @@ p {
     margin-right: 6px;
 }
 
+.avatar {
+    border: none;
+}
+
+.avatar:hover {
+    outline: 2px solid var(--primary-orange);
+    border-radius: 50%;
+    outline-offset: -2px;
+}
+
 .product-container {
     padding: 0 100px;
 }

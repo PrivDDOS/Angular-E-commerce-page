@@ -13,6 +13,7 @@ export class App implements AfterViewInit {
 
   quantity = 0;
   cartQuantity = 0;
+  addToCart: boolean = false;
 
   ngAfterViewInit(): void {
     document.querySelectorAll<HTMLElement>('[data-toggle="lightbox"]').forEach((trigger) => {
@@ -25,6 +26,19 @@ export class App implements AfterViewInit {
   }
 
   quantityMinus(): void {
-    this.quantity -= 1;
+    this.quantity = Math.max(0, this.quantity - 1);
+  }
+
+  cartCalculation() {
+    let price: number = 125.00
+    let total: number = price * this.cartQuantity
+    return total.toFixed(2)
+  }
+
+  addBtn(): void {
+    if (this.quantity > 0) {
+      this.cartQuantity += this.quantity;
+      this.quantity = 0;
+    }
   }
 }

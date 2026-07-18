@@ -24,7 +24,7 @@
           aria-expanded="false"
         > 
           <div class="cart-quantity position-absolute quantity-color">{{ cartQuantity }}</div>
-          <img src="./images/icon-cart.svg" alt="cart" />
+          <img src="./images/icon-cart.svg" alt="cart"/>
         </a>
 
         <div
@@ -35,15 +35,19 @@
           <li class="mb-3">
             <p class="fw-bold mb-4">Cart</p>
             <div class="d-flex align-items-center flex-column">
-              <!--<div class="d-flex flex-row">
-                <img src="./images/image-product-1-thumbnail.jpg" alt="product" class="cart-img"/>
-                <div class="d-flex align-items-start flex-column">
-                  <p>Fall Limited Edition Sneakers</p>
-                  <div>
-                    <p>$125.00 x 3 <strong>$375.00</strong></p>
+              @if (cartQuantity != 0) {
+                <div class="d-flex flex-row">
+                  <img src="./images/image-product-1-thumbnail.jpg" alt="product" class="cart-img"/>
+                  <div class="d-flex align-items-start flex-column">
+                    <p>Fall Limited Edition Sneakers</p>
+                    <div>
+                      <p>$125.00 x {{ cartQuantity }} || <strong class="fw-bolder">${{ cartCalculation() }}</strong></p>
+                    </div>
                   </div>
                 </div>
-              </div>-->
+              } @else {
+                <p>Your cart is empty.</p>
+              }
               <div class="add w-100 d-flex align-items-center justify-content-center btn btn-background-color btn-color-black  mt-3">
                 Checkout
               </div>
@@ -53,7 +57,7 @@
       </div>
 
       <div>
-        <img src="./images/image-avatar.png" alt="user avatar" class="w-50 h-50" role="button" />
+        <img src="./images/image-avatar.png" alt="user avatar" class="avatar w-50 h-50" role="button" />
       </div>
     </div>
   </nav>
@@ -107,24 +111,22 @@
         <p class="h5 text-decoration-line-through fw-bold mt-2">$250.00</p>
         <div class="d-flex flex-row mt-4">
           <div class="d-flex flex-row align-items-center gap-4">
-            <img
-              src="./images/icon-minus.svg"
-              class="btn bg-white border-0 shadow-none py-1"
-              (click)="quantityMinus()"
-            />
+            <button type="button" class="btn bg-white border-0 shadow-none py-1" (click)="quantityMinus()">
+              <img src="./images/icon-minus.svg" alt="decrease quantity" />
+            </button>
             <p class="fw-bold">{{ quantity }}</p>
-            <img
-              src="./images/icon-plus.svg"
-              class="btn bg-white border-0 shadow-none py-1"
-              (click)="quantityPlus()"
-            />
+            <button type="button" class="btn bg-white border-0 shadow-none py-1" (click)="quantityPlus()">
+              <img src="./images/icon-plus.svg" alt="increase quantity" />
+            </button>
           </div>
-          <div
+          <button
+            type="button"
             class="add d-flex align-items-center justify-content-center btn btn-background-color btn-color-black button-width ms-3"
+            (click)="addBtn()"
           >
-            <img src="./images/icon-cart.svg" />
-            <p class="h5 fw-bold btn-color-black ms-2">Add to cart</p>
-          </div>
+            <img src="./images/icon-cart.svg" alt="cart icon" />
+            <span class="h5 fw-bold btn-color-black ms-2">Add to cart</span>
+          </button>
         </div>
       </div>
     </div>
