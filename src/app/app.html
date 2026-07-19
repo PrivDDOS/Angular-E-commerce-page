@@ -64,31 +64,31 @@
 
   <main class="mt-5 d-flex flex-row w-100 h-100 product-container">
     <div class="d-flex flex-column align-items-center w-50">
-      <div class="">
-        <div class="product-img rounded"></div>
-      </div>
+      <a [href]="selectedImage" data-toggle="lightbox" data-gallery="sneaker">
+        <div class="product-img rounded" [style.backgroundImage]="'url(' + selectedImage + ')'" ></div>
+      </a>
 
       <div class="w-80 d-flex justify-content-around mt-3">
         <div class="gallery-img rounded">
-          <a href="./images/image-product-1.jpg" data-toggle="lightbox" data-gallery="sneaker">
+          <a (click)="selectImage('/images/image-product-1.jpg')" style="cursor: pointer;">
             <img src="./images/image-product-1-thumbnail.jpg" alt="product 1" class="thumbnail" />
           </a>
         </div>
 
         <div class="gallery-img rounded">
-          <a href="./images/image-product-2.jpg" data-toggle="lightbox" data-gallery="sneaker">
+          <a (click)="selectImage('/images/image-product-2.jpg')" style="cursor: pointer;">
             <img src="./images/image-product-2-thumbnail.jpg" alt="product 2" class="thumbnail" />
           </a>
         </div>
 
         <div class="gallery-img rounded">
-          <a href="./images/image-product-3.jpg" data-toggle="lightbox" data-gallery="sneaker">
+          <a (click)="selectImage('/images/image-product-3.jpg')" style="cursor: pointer;">
             <img src="./images/image-product-3-thumbnail.jpg" alt="product 3" class="thumbnail" />
           </a>
         </div>
 
         <div class="gallery-img rounded">
-          <a href="./images/image-product-4.jpg" data-toggle="lightbox" data-gallery="sneaker">
+          <a (click)="selectImage('/images/image-product-4.jpg')" style="cursor: pointer;">
             <img src="./images/image-product-4-thumbnail.jpg" alt="product 4" class="thumbnail" />
           </a>
         </div>

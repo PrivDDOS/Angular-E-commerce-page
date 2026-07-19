@@ -14,6 +14,7 @@ export class App implements AfterViewInit {
   quantity = 0;
   cartQuantity = 0;
   addToCart: boolean = false;
+  selectedImage = '/images/image-product-1.jpg';
 
   ngAfterViewInit(): void {
     document.querySelectorAll<HTMLElement>('[data-toggle="lightbox"]').forEach((trigger) => {
@@ -27,6 +28,10 @@ export class App implements AfterViewInit {
 
   quantityMinus(): void {
     this.quantity = Math.max(0, this.quantity - 1);
+  }
+
+  selectImage(image: string): void {
+    this.selectedImage = image;
   }
 
   cartCalculation() {
